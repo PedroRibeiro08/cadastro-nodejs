@@ -1,0 +1,34 @@
+<%- include("../partials/header", { titulo }) %>
+
+<div class="titulo-pagina">
+  <div>
+    <h1>Categorias</h1>
+    <p>Lista de categorias cadastradas.</p>
+  </div>
+  <a href="/categorias/cadastro" class="botao">Nova categoria</a>
+</div>
+
+<% if (categorias.length === 0) { %>
+  <div class="vazio">Ainda não existem categorias cadastradas.</div>
+<% } else { %>
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% categorias.forEach(categoria => { %>
+          <tr>
+            <td><%= categoria.id %></td>
+            <td><%= categoria.nome %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+
+<%- include("../partials/footer") %>

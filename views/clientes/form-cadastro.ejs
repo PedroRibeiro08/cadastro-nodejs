@@ -1,0 +1,30 @@
+<%- include("../partials/header", { titulo }) %>
+
+<div class="formulario">
+  <h1>Novo cliente</h1>
+
+  <form action="/clientes" method="POST">
+    <label>Nome
+      <input type="text" name="nome" required>
+    </label>
+
+    <label>E-mail
+      <input type="email" name="email" required>
+    </label>
+
+    <label>Telefone
+      <input type="text" name="telefone" required>
+    </label>
+
+    <label>Cidade
+      <input type="text" name="cidade" required>
+    </label>
+
+    <div class="acoes">
+      <a href="/clientes" class="botao cancelar">Voltar</a>
+      <button type="submit" class="botao">Cadastrar</button>
+    </div>
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

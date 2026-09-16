@@ -1,0 +1,41 @@
+<%- include("partials/header", { titulo }) %>
+
+<section class="inicio">
+  <h1>Sistema de Cadastro</h1>
+  <p>Um espaço simples para cadastrar e consultar as informações do sistema.</p>
+</section>
+
+<section class="atalhos">
+  <a href="/categorias">
+    <strong>Categorias</strong>
+    <span>Organize os produtos por categoria.</span>
+  </a>
+
+  <a href="/clientes">
+    <strong>Clientes</strong>
+    <span>Cadastre e consulte seus clientes.</span>
+  </a>
+
+  <a href="/fornecedores">
+    <strong>Fornecedores</strong>
+    <span>Cadastre e consulte fornecedores.</span>
+  </a>
+
+  <a href="/produtos">
+    <strong>Produtos</strong>
+    <span>Cadastre e consulte os produtos.</span>
+  </a>
+</section>
+
+<section class="cadastros">
+  <h2>Cadastros</h2>
+
+  <div class="botoes">
+    <a href="/categorias/cadastro" class="botao">Nova categoria</a>
+    <a href="/clientes/cadastro" class="botao">Novo cliente</a>
+    <a href="/fornecedores/cadastro" class="botao">Novo fornecedor</a>
+    <a href="/produtos/cadastro" class="botao">Novo produto</a>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

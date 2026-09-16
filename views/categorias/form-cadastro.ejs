@@ -1,0 +1,18 @@
+<%- include("../partials/header", { titulo }) %>
+
+<div class="formulario">
+  <h1>Nova categoria</h1>
+
+  <form action="/categorias" method="POST">
+    <label>Nome
+      <input type="text" name="nome" required>
+    </label>
+
+    <div class="acoes">
+      <a href="/categorias" class="botao cancelar">Voltar</a>
+      <button type="submit" class="botao">Cadastrar</button>
+    </div>
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

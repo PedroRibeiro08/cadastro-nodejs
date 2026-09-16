@@ -1,0 +1,42 @@
+<%- include("../partials/header", { titulo }) %>
+
+<div class="titulo-pagina">
+  <div>
+    <h1>Fornecedores</h1>
+    <p>Lista de fornecedores cadastrados.</p>
+  </div>
+  <a href="/fornecedores/cadastro" class="botao">Novo fornecedor</a>
+</div>
+
+<% if (fornecedores.length === 0) { %>
+  <div class="vazio">Ainda não existem fornecedores cadastrados.</div>
+<% } else { %>
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Razão Social</th>
+          <th>CNPJ</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+          <th>Cidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% fornecedores.forEach(fornecedor => { %>
+          <tr>
+            <td><%= fornecedor.id %></td>
+            <td><%= fornecedor.razaoSocial %></td>
+            <td><%= fornecedor.cnpj %></td>
+            <td><%= fornecedor.email %></td>
+            <td><%= fornecedor.telefone %></td>
+            <td><%= fornecedor.cidade %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+
+<%- include("../partials/footer") %>
